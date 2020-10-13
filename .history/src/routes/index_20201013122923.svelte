@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte'
 
 	onMount(() => {
-		
+		console.log('this is in the browser')
 	})
 </script>
 
