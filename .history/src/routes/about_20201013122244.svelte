@@ -1,5 +1,5 @@
 <script lang="ts">
-	
+	console.log('about')
 </script>
 
 <svelte:head>

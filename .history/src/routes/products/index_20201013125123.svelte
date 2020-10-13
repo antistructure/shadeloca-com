@@ -1,14 +1,13 @@
 <script context="module">
   export async function preload(page, session) {
-    const products = await this.fetch('/products.json').then(resp => resp.json());
+    const res = await this.fetch('/data.json')
+    const employees = await res.json()
 
-    return { products }
+    return { employees }
   }
 </script>
 
 <script lang="ts">
-  export let products
-  console.log(products)
 </script>
 
 <style></style>

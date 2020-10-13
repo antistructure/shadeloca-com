@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte'
 
 	onMount(() => {
-		
+		console.log('this is in the browser')
+		fetch('http://dummy.restapiexample.com/api/v1/employees')
 	})
 </script>
 
