@@ -1,7 +1,7 @@
 import { query as q } from 'faunadb'
 
 import { queryDbServer } from '../database/query'
-import { getId } from './utils'
+import { getId } from './utils.js'
 
 
 export const handler = async (event, context) => {

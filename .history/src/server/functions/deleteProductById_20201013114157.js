@@ -1,16 +1,10 @@
 import { query as q } from 'faunadb'
 
 import { queryDbServer } from '../database/query'
-import { getId } from './utils'
+import { getId } from './utils.js'
 
-
-export const handler = async (event, context) => {
-  const data = JSON.parse(event.body)
-  const id = getId(event.path)
-  
-  console.log(`Function 'todo-update' invoked. update id: ${id}`)
-
-  return await queryDbServer(q.Update(q.Ref(q.Collection(`products`), `${id}`), {data}))
+export const handler = async (event, context) => 
+    queryDbServer(q.Delete(q.Ref(q.Collection('products'), getId(event.path))))
     .then((res) => {
       console.log('success', res)
       return {
@@ -25,4 +19,3 @@ export const handler = async (event, context) => {
         body: JSON.stringify(error)
       }
     })
-}
