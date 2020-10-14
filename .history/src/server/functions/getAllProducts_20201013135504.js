@@ -14,7 +14,7 @@ export const handler = (event, context) => {
       
       const getEachProduct = res.data.map(ref => q.Get(ref))
       
-      return client.query(getEachProduct).then(res => {
+      return queryDbServer(getEachProduct).then(res => {
         return {
           statusCode: 200,
           body: JSON.stringify(res)
