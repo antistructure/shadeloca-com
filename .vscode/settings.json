@@ -1,7 +1,13 @@
 {
   "cSpell.words": [
+    "apollo",
+    "apollo cache inmemory",
+    "cache",
     "faunadb",
+    "inmemory",
     "shadeloca",
-    "sirv"
+    "sirv",
+    "svql",
+    "tslib"
   ]
 }
